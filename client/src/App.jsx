@@ -1,8 +1,26 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/Signup';
+import About from './pages/About';
+import Profile from './pages/Profile';
+import NotFound from './pages/NotFound';
+import Header from './components/Header';
+
 function App() {
   return (
-    <>
-      <h1 className="text-red-500">Hello</h1>
-    </>
+    <BrowserRouter>
+    <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='*' element={<NotFound/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
