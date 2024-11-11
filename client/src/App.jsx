@@ -12,6 +12,7 @@ import CreateListing from './pages/CreateListing';
 import UpdateListing from './pages/UpdateListing';
 import Listing from './pages/Listing';
 import Search from './pages/Search';
+import LightWeight from './pages/LightWeight';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             element={<UpdateListing />}
           />
         </Route>
+        <Route path='/lightweight'element={<LightWeight/>}/>
         <Route path='*' element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
